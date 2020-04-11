@@ -1,5 +1,9 @@
-package ccuisse;
+package threadexp;
 
+/*
+- to demonstrate what happens if one thread from thread group exits with
+	runtime exception - other threads continues
+ */
 public class ThreadTest {
 
 	public static void main(String[] args) {

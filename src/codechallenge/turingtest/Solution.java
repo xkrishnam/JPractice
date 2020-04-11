@@ -1,6 +1,5 @@
-package turingtest;
+package codechallenge.turingtest;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.lang.*;
 
@@ -82,6 +81,7 @@ class Solution
 //
 //            }
 //        }
+        return 0;
     }
 
 

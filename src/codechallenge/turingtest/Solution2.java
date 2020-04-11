@@ -1,4 +1,4 @@
-package turingtest;
+package codechallenge.turingtest;
 
 import java.util.*;
 import java.lang.*;

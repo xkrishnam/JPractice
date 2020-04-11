@@ -1,4 +1,4 @@
-package techGig.codewar;
+package codechallenge.codewar;
 
 import java.util.*;
 

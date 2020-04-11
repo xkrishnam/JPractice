@@ -1,6 +1,6 @@
-package edu.vucliptest.versionkata;
+package codechallenge.versionkata;
 
-import edu.vucliptest.versionkata.domain.FileRecord;
+import codechallenge.versionkata.domain.FileRecord;
 
 import java.util.Comparator;
 

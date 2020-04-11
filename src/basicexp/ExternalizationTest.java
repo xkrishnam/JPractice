@@ -1,12 +1,16 @@
-package ccuisse;
+package basicexp;
 
 import java.io.*;
-
+/*
+- demonstrating externalization
+- why not use primitive types with externalization because during deserialization
+    it can assign default values like 0 for int
+ */
 public class ExternalizationTest implements Externalizable {
 
     private String fname;
     private String lname;
-    private int age;
+    private Integer age;
 
     public ExternalizationTest() {
     }
@@ -19,16 +23,16 @@ public class ExternalizationTest implements Externalizable {
 
     @Override
     public void writeExternal(ObjectOutput objectOutput) throws IOException {
-        objectOutput.writeObject(lname);
-        objectOutput.writeObject(fname);
-        objectOutput.writeInt(age);
+        objectOutput.writeUTF(fname);
+        objectOutput.writeUTF(lname);
+        //objectOutput.writeInt(age);
     }
 
     @Override
     public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
-        fname=(String) objectInput.readObject();
-        lname=(String) objectInput.readObject();
-        age=objectInput.readInt();
+        fname=objectInput.readUTF();
+        lname=objectInput.readUTF();
+        //age=objectInput.readInt();
     }
 
     @Override

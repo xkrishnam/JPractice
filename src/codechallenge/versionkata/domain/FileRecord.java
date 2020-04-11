@@ -1,4 +1,4 @@
-package edu.vucliptest.versionkata.domain;
+package codechallenge.versionkata.domain;
 
 public class FileRecord {
 

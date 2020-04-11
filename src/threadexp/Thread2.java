@@ -1,5 +1,7 @@
-package bmctest;
-
+package threadexp;
+/*
+- What will be the output of code (straight forward)
+ */
 public class Thread2 extends Thread{
     int x,y;
     @Override

@@ -1,6 +1,6 @@
-package edu.vucliptest.versionkata;
+package codechallenge.versionkata;
 
-import edu.vucliptest.versionkata.domain.FileRecord;
+import codechallenge.versionkata.domain.FileRecord;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,11 +12,14 @@ import java.util.Collections;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 
+/*
+ * get the apps using latest version api - impl with parllel stream usage
+ * */
 public class VersionKataMainWithStreamAndLambda {
 
     public static void main(String[] args) throws IOException {
         Instant start=Instant.now();
-        Files.lines(Paths.get("/home/krishna/input.csv"))
+        Files.lines(Paths.get("/home/krishna/Documents/DEV/inputs/input_vkata.csv"))
                 .map(FileRecord::new)
                 .collect(groupingBy(FileRecord::getaPIName, toList()))
                 .entrySet()

@@ -1,6 +1,5 @@
-package techGig.cadburydist;
+package codechallenge.cadburydist;
 
-import java.io.*;
 import java.util.*;
 public class BrillioCandidateCode {
 //    public static void main(String args[] ) throws Exception {

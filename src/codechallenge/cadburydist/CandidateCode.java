@@ -1,4 +1,4 @@
-package techGig.cadburydist;
+package codechallenge.cadburydist;
 
 
 import java.util.*;

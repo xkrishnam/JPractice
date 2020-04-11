@@ -1,20 +1,24 @@
-package techmtest;
+package codechallenge;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * check string for palindrome and anagram of palindrome
+ *
+ */
 public class PalindromeAndAnagramOfPalindrome {
     public static void main(String[] args) {
         List<String> wordsPPLD = Arrays.asList("kayak", "sagas", "solos", "eve", "anna","foo", "bar", "buzz", "fizz", "cloud");
-        List<String> wordsPANA = Arrays.asList("foo", "kkppd", "buzzbu", "pizizp", "gggoo","abcd", "five", "eleven", "pizza", "eved");
+        List<String> wordsPANA = Arrays.asList("foo", "kkppd", "buxzbu", "pizizp", "gggoo","abcd", "five", "eleven", "pizza", "eved");
 
         for(String str:wordsPPLD)
             System.out.println(isPldrm(str));
-
+        System.out.println("-------------------------");
         for(String str:wordsPANA)
-            System.out.println(isAnaOfPld(str));
+            System.out.println(str+"--"+isAnaOfPld(str));
     }
 
     public static boolean isPldrm(String str){
@@ -39,10 +43,10 @@ public class PalindromeAndAnagramOfPalindrome {
         }
 
         if(str.length()%2==0){
-//            for (Map.Entry<Character,Integer> e:tmp.entrySet()) {
-//                if(e.getValue()%2!=0)
-//                    return false;
-//            }
+            for (Map.Entry<Character,Integer> e:tmp.entrySet()) {
+                if(e.getValue()%2!=0)
+                    return false;
+            }
         }else{
             int oddCount=0;
             for (Map.Entry<Character,Integer> e:tmp.entrySet()) {

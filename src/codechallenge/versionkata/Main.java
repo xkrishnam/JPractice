@@ -1,24 +1,15 @@
-package edu.vucliptest.versionkata;
+package codechallenge.versionkata;
 
-/* Save this in a file called Main.java to compile and test it */
 
 /*
-   Example file showing how to write a program that reads
-   input from `input.txt` in the current directory
-   and writes output to `output.txt` in the current directory
-*/
+* get the apps using latest version api - impl with little stream usage
+* */
 
-/* Do not add a package declaration */
-
-import edu.vucliptest.versionkata.domain.FileRecord;
+import codechallenge.versionkata.domain.FileRecord;
 
 import java.io.*;
-import java.lang.annotation.Native;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
-import java.time.temporal.TemporalAmount;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -38,7 +29,7 @@ public class Main {
         //var aa;
         int numLines = 0;
         try {
-            Stream<String> in = new BufferedReader(new FileReader("/home/krishna/input.csv")).lines();
+            Stream<String> in = new BufferedReader(new FileReader("/home/krishna/Documents/DEV/inputs/input_vkata.csv")).lines();
 
             List<FileRecord> fileRecords=in.map(Main::addToList).collect(toList());
 
